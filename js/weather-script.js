@@ -29,7 +29,7 @@ setTimeout(() => {
 async function fetchCityPhoto(city) {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/search/photos?query=${city}-city&per_page=1&client_id=${unsplashAccessKey}`
+      `https://api.unsplash.com/search/photos?query=${city}&per_page=1&client_id=${unsplashAccessKey}`
     );
     const data = await response.json();
 
