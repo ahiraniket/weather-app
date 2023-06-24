@@ -3,7 +3,7 @@
 ## About
 WeatherNow is a web application that allows users to check the current weather conditions of a specific city. It retrieves weather data from the OpenWeatherMap API and displays the temperature, weather type, humidity, and wind speed. Additionally, it dynamically fetches a background image of the city using the Unsplash API to provide a visually appealing user experience.
 
-🌐 Live Demo: [WeatherNow](https://ahiraniket.github.io/weather-app/){:target="_blank"}
+🌐 Live Demo: [WeatherNow](https://ahiraniket.github.io/weather-app/)
 
 ## Features ✨
 * 🌍 User-friendly interface with a search input field to enter the desired city name.
