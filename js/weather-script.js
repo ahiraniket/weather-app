@@ -8,6 +8,24 @@ const weatherIcon = document.querySelector(".weather-icon");
 
 const unsplashAccessKey = "7PgTUzXeQc2Em_lVXd6LtmO09s_UoaNpNKkv-P_vqEA";
 
+
+const loader = document.getElementById("loader");
+
+function showLoader() {
+  loader.style.display = "block";
+}
+
+function hideLoader() {
+  loader.style.opacity = "0";
+  setTimeout(() => {
+    loader.style.display = "none";
+    loader.style.opacity = "1";
+  }, 500);
+}
+setTimeout(() => {
+  hideLoader();
+}, 1500);
+
 async function fetchCityPhoto(city) {
   try {
     const response = await fetch(
