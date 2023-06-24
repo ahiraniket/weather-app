@@ -29,12 +29,12 @@ setTimeout(() => {
 async function fetchCityPhoto(city) {
   try {
     const response = await fetch(
-      `https://api.unsplash.com/search/photos?query=${city}&per_page=1&client_id=${unsplashAccessKey}`
+      `https://api.unsplash.com/search/photos?query=${city}&per_page=1&orientation=landscape&client_id=${unsplashAccessKey}`
     );
     const data = await response.json();
 
     if (data.results.length > 0) {
-      const photoUrl = data.results[0].urls.regular;
+      const photoUrl = data.results[0].urls.full;
       return photoUrl;
     } else {
       return null;
@@ -93,6 +93,7 @@ async function checkWeather(city) {
     const photoUrl = await fetchCityPhoto(city);
     if (photoUrl) {
       const bgImgElement = document.querySelector(".bg-img");
+      
       bgImgElement.style.backgroundImage = `url(${photoUrl})`;
     }
     document.querySelector(".details").style.display = "flex";
